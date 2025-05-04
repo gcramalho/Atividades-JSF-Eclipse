@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Cadastro de Usuário</title>
+        <h:outputStylesheet library="css" name="main.css"/>
+    </h:head>
+    <h:body>
+    	<!-- Formulário de cadastro-->
+        <div class="container">
+            <h1>Cadastro de Usuário</h1>
+            
+            <h:form>
+                <div class="form-group">
+                    <h:outputLabel for="nome" value="Nome:" />
+                    <h:inputText id="nome" value="#{pessoa.nome}" styleClass="form-control" />
+                </div>
+                
+                <h:commandButton value="Adicionar" action="#{pessoa.adicionarNome}" styleClass="btn" />
+            </h:form>
+            
+            <h2>Nomes Cadastrados:</h2>
+            <ul>
+                <h:dataTable value="#{pessoa.nomes}" var="nomeCadastrado" styleClass="nome-list">
+                    <h:column>
+                        #{nomeCadastrado}
+                    </h:column>
+                </h:dataTable>
+            </ul>
+        </div>
+    </h:body>
+</html>
