@@ -1,1 +1,1 @@
-## Projeto de aplicação Java com Eclipse.
+## Projetos de aplicação Java com Eclipse.
